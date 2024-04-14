@@ -13,16 +13,9 @@ const {paperRouter} = require("./routes/paperRoutes")
 app.use(bodyParser.urlencoded({extended: false}))
 app.use('/uploads', express.static('uploads'));
 app.use(bodyParser.json())
-// app.use(cors({ origin: 'https://code-maestro-opal.vercel.app' }));
-app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "https://code-maestro-opal.vercel.app"); // Set the allowed origin
-    res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE"); // Set the allowed HTTP methods
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization"); // Set the allowed headers
-    next();
-})
 const corsOptions ={
-    origin:'https://code-maestro-opal.vercel.app', 
-    credentials:true,            //access-control-allow-credentials:true
+    origin:'https://code-maestro-seven.vercel.app', 
+    credentials:true,           
     optionSuccessStatus:200
 }
 app.use(cors(corsOptions));
