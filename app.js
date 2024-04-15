@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use('/uploads', express.static('uploads'));
 app.use(bodyParser.json())
 const corsOptions ={
-    origin:'https://code-maestro-seven.vercel.app', 
+    origin:'http://localhost:5173', 
     credentials:true,           
     optionSuccessStatus:200
 }
